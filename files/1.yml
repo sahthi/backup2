@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+  - name: Ansible create multiple files example
+    file: 
+      path: "{{ item }}"
+      state: touch
+      mode: 0775
+    with_items:
+    - int1.txt
+    - int2.txt
+    - int3.txt
+    - int4.txt
+

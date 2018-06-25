@@ -1,0 +1,18 @@
+Use SCCM and other related tools for patch deployments, tracking, reporting, and remediation
+• Use SCCM within a hybrid  MS In tune implementation for the management of mobile devices
+• Develop and provide patch compliance to the consumers of the services
+• Troubleshoot and work with service consumers to resolve non-compliance issues
+• Possess a working knowledge of Active Directory and SCCM integrations with Active Directory
+• Demonstrate a thorough understanding of application packaging and deployment using programs and advertisements
+• Detail oriented; packages must be delivered accurately as well as patches
+• Understand Operating System deployment with experience of working with Sequences, WIM files, and other relevant technology for OSD operations
+• Ability to script in Power shell
+• Good working knowledge of System Center Orchestrator
+• Understanding of compliance baselines and the significance of those baselines
+• In depth knowledge of client health, health issues and remediation activities
+• Knowledge of how to interpret SCCM log files
+• A strong desire to produce quality work, adopt standards and adhere to those standards
+• Must be able to think out of the box.  The ability to troubleshoot non-standard issues/undocumented issues, to look at the big picture and see how a problem fits in and determine a solution that fits within the existing framework
+• Strong understanding of SSRS and be able to create customized reports based on SCCM data within it.
+• Provide input to assist with continual improvement 
+• Awareness of mobile device management and Intune specifically
