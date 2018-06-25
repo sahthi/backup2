@@ -1,0 +1,37 @@
+ Do I lose my data when the Docker container exits?
+
+You can answer this by saying, no I won’t lose my data when Docker container exits, any data that your application writes to disk gets preserved in its container until you explicitly delete the container. The file system for the container persists even after the container halts.
+
+A company needs to develop a Java Application. In order to do so the developer will setup an environment with tomcat server installed in it. Once the application is developed, it needs to be tested by the tester. Now the tester will again set up tomcat environment from the scratch to test the application. Once the application testing is done, it will be deployed on the production server. Again the production needs an environment with tomcat installed on it, so that it can host the Java application. If you see the same tomcat environment setup is done thrice. There are some issues that I have listed below with this approach:
+
+1) There is a loss of time and effort.
+
+2) There could be a version mismatch in different setups i.e. the developer & tester may have installed tomcat 7, however the system admin installed tomcat 9 on the production server. 
+
+Now, I will show you how Docker container can be used to prevent this loss. 
+
+In this case, the developer will create a tomcat docker image ( A Docker Image is nothing but a blueprint to deploy multiple containers of the same configurations ) using a base image like Ubuntu, which is already existing in Docker Hub (Docker Hub has some base docker images available for free) . Now this image can be used by the developer, the tester and the system admin to deploy the tomcat environment. This is how docker container solves the problem
+
+Before we go ahead, let me summarize the learning till now:
+
+    Virtual Machines are slow and takes a lot of time to boot.
+    Containers are fast and boots quickly as it uses host operating system and shares the relevant libraries.
+    Containers does not waste or block host resources unlike virtual machines.
+    Containers have isolated libraries and binaries specific to the application they are running.
+    Containers are handled by Containerization engine.
+    Docker is one of the containerization platforms which can be used to create and run containers.
+
+What is Docker & Docker Container ?
+
+What is Docker ? – Docker is a containerization platform that packages your application and all its dependencies together in the form of a docker container to ensure that your application works seamlessly in any environment.
+
+What is Container ? – Docker Container is a standardized unit which can be created on the fly to deploy a particular application or environment. It could be an Ubuntu container, CentOs container, etc. to full-fill the requirement from an operating system point of view. Also, it could be an application oriented container like CakePHP container or a Tomcat-Ubuntu container etc.
+Integration of docker with other tools:
+
+Integration of different tools using Virtual Machine maybe possible, but even that possibility comes with a lot of complications.
+
+I can have only a limited number of DevOps tools running in a Virtual Machine. As you can see in the image above, If I want many instances of Jenkins and Puppet, then I would need to spin up many Virtual Machines because each can have only one running instance of these tools. Setting up each VM brings with it, infrastructure problems. I will have the same problem if I decide to setup multiple instances of Ansible, Nagios, Selenium and Git. It will also be a hectic task to configure these tools in every VM.
+
+This is where Docker comes to the rescue. Using Docker Container, we can set up many instances of Jenkins, Puppet, and many more, all running in the same container or running in different containers which can interact with one another by just running a few commands. I can also easily scale up by creating multiple copies of these containers. So configuring them will not be a problem.
+
+

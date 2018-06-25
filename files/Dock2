@@ -1,0 +1,28 @@
+
+
+What Is DevOps?
+
+In these fast-paced times, we see more emphasis being laid on faster delivery of software deployment. Because in order to stay competitive in the market the companies are expected to deploy quality software in defined timelines. Hence the roles of software developer and system admin have become very important. A lot of juggling of responsibilities happens between the two teams. Let us take a look at how do these individuals contribute to the deployment process.
+
+A programmer or a software developer is responsible for developing the software. In simple words he is supposed to develop a software which has:
+
+    New features
+    Security Upgrades
+    Bug Fixes
+
+But a developer may have to wait for weeks for the product to get deployed which is also known as ‘Time To Market’ in business terms. So this delay may put pressure on the developer because he is forced re-adjust his dependent activities like:
+
+    Pending code
+    Old code
+    New products
+    New features
+
+Also when the product is put into the production environment, the product may exhibit some unforeseen errors. This is because the developer writes code in the development environment which may be different from the production environment.
+
+Let us go ahead and take a look at this process from the operations point of view. Now the operations team or the system administrators team is responsible for maintaining and assuring the up time of the production environment. Now as the company invests time and money in more products and services, the number of servers, admins have to take care of also keep growing.
+
+This gives rise to more challenges because the tools that were used to manage the earlier amount of servers may not be sufficient to cater the needs of upcoming and growing number of servers. The operations team also needs to make slight changes to the code so that it fits into the production environment. Hence the need to schedule these deployments accordingly also grows, which leads to time delays. 
+
+When the code is deployed the operations team is also responsible to handle code changes or minor errors to the code. At times the operation team may feel pressurised and it may seem like developers have pushed their responsibilities to the operations side of the responsibility wall. As you may come to realise that none of the sides can be held culprit.
+
+
