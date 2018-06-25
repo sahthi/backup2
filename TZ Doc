@@ -1,0 +1,33 @@
+TEEC_Initialise context:
+
+It initialises a new TEE context forming a connection between its client application and TEE identified by string identifier name
+
+name: a zero determined string that determines the TEE to connect to,If this parameter is set to NULL,the implementation must set to default TEE
+Context:a TEEC_Context structure that must be initaialised by implementation
+
+TEEC_OpenSeesion:
+
+Parameters
+
+context: a pointer to an initialized TEE Context.
+session: a pointer to a Session structure to open.
+destination: a pointer to a structure containing the UUID of the destination Trusted Application.
+connectionMethod: the method of connection to use. Refer to section 4.4.5 for more details.
+connectionData: any necessary data required to support the connection method chosen.
+operation: a pointer to an Operation containing a set of Memory References to exchange with
+the Trusted Application, or NULL if no message buffers are to be exchanged or if the operation
+cannot be cancelled. Refer to TEEC_InvokeCommand for more details.
+returnOrigin: a pointer to a variable which will contain the return origin. This field may be NULL
+if the return origin is not needed.
+Return
+
+TEEC_SUCCESS, then the Session was opened successfully
+An error code otherwise:
+o If returnOrigin is TEEC_ORIGIN_TRUSTED_APP, the meaning of the return value
+depends on the protocol between the Client Application and the Trusted Application. In
+any case, a value of 0 (TEEC_SUCCESS) means that the session was successfully opened
+and a non-zero value means that the session opening failed.
+o If the returnOrigin is other than TEEC_ORIGIN_TRUSTED_APP, the Implementation
+MUST return one of the error codes from Table 4-2 to denote the reason why the session
+opening or temporary memory registration was not successful. In particular, if the return
+value is TEEC_ERROR_CANCEL then the operation was cancelled. Note the Trusted

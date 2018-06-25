@@ -1,0 +1,74 @@
+What is STLC and Explain the stages?
+What is Nyquist rate?
+What is sanity Testing,Regression testing,performance testing?
+Explain Network Protocol(MQTT) and MQTT Architecture. How to reduce Duplication of packet on MQTT broker?
+What Is fix data packet and variable length data packet?
+What Is QOS (quality of service) ?
+How handshaking between Client and MQTT broker happen?
+Describe about the performance testing using QXDM tool.
+What is a logmass in QXDM.
+How the crashes are collected and What is the need of crash logs.
+Tell me about the RF testing.
+Difference in Application testing and Device testing ?
+What is the framework you have used for writing the Python scripts (For Automation) ?
+Where unit test will be performed?
+What is automation testing and manual testing?
+What is integration testing?
+What is the interface for MTF?
+CIT and MTF is used for which target sanity testing?
+Explain about QMITESTPRO?
+If loadbuild is failed where do you check?
+How to get QXDM logs?
+What is QMI Test Pro?
+How many types of log analysis are ther in QXDM?
+What is crash scope?
+If device is crashed? What you will do?
+What is ATM? What is the use of ATM (Automated test manager)?
+What is Smoke Testing?
+What is Real Testing?
+What is Re-testing?
+What is Regression Testing?
+What is Sanity Testing?
+What is White Box Testing?
+What is Black Box Testing?
+What is Grey Box Testing?
+What are the Software Development Life Cycle (SDLC) phases?
+What is fundamental test process in software testing?
+What is the difference between white box, black box, and gray box testing?
+What is V-model- advantages, disadvantages and when to use it?
+What is Software Testing? Why is software testing necessary?
+What are Software Testing Levels?
+What is Component integration testing?
+When do defects in software testing arise?
+What is impact analysis? 
+When what is visible to end-users is a deviation from the specific or expected behavior, this is called?
+When Testing should be stopped?
+What is functional & Non-functional system testing?
+What is System testing?
+What is Defect or bugs or faults in software testing?
+What is Verification & Validation in software testing?
+What is Waterfall model- advantages, disadvantages and when to use it?
+What is Incremental model- advantages, disadvantages and when to use it?
+What is agile model – advantages, disadvantages and when to use it?
+When do Software testing activities should start?
+What is the main reason for testing software before releasing it?
+Difference between Volume, Load and stress testing in software?
+What is Compliance testing in software testing?
+What is Stress testing in software testing?
+What is test coverage in software testing? 
+What is Use case testing in software testing?
+What is traceability in Software testing?
+What is risk in software testing?
+Explain Test Automation Strategy
+Explain Guidelines for Testing  Web Application & Desktop Applications
+What is the difference between Testing Techniques and Testing Tools?
+Write functional Test Cases to Test different types of media file like mp3, mp4, 3gp containing audio, videos
+Write an automated test case for Detecting All Supported Gestures in android
+Write Test scenario for reading temperature data from Device.
+Write Test scenario for Read the voltage from the sensor.
+Which test cases are written first: white boxes or black boxes
+What are different system testing for Android? Explain
+Explain Android testing framework?
+Write a Test scripts which display “Username or password is incorrect” for UI interface
+What do you check in GUI Testing? Write 5 GUI Testing Test Cases
+
