@@ -1,0 +1,34 @@
+top:
+It displays linux processes,it provides dyanamic real time view of a running system,By default,it displays the most cpu intensive tasks running on a server and updates the list every 5 seconds.
+vmstat:
+this tool provides information about memory,io wait,swap utilisation and system activity,it is particularly useful for diagnising io related information
+Recipe in chef:
+a recipe is a collection of resources in chef,and primarily configure a software package or some piece of infrastructure.
+Resource:
+smallest units of chef which do activities
+configuration management:
+a tool used to manage server configuration with automation is called CM.
+Knife:
+it is a command line tool to interact with chef server
+Bootstraping:
+it is establishing connection with node to chef server,during bootstrapping only,workstation can communicate with node.
+runlist:
+runlist is an ordered list of all cookbooks and recipes that a chef-client needs to pull from chef server to run on a node.
+ohai:
+the server component of chef,which is used to detect attributes on a node,which are responsible for building and collection on node objects is ohai.
+Playbook:
+It is a place where we do automation.
+Inventory:
+It is a file where we put our host information 
+Lambda:
+execute background tasks,not for hosting an application.
+elastic beanstalk:
+Deploy your application without worrying about the underlying hardware,it will create environment like php,java,python.
+Load balancer:
+It distributes the workload on deployed instances
+autoscaling:
+it will scale up and down automatically,if the cpu usage is high,then it will automatically launch another server. 
+roles:
+a predefined way for organising playbooks and other files in order to facilitate sharing and reusing portions of provisioning.
+
+ 

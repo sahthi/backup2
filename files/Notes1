@@ -1,0 +1,65 @@
+1. What is LVM and what is its role?
+
+LVM stands for Logical Volume Manager. It is used to resize the file system online.
+2. What is the role of Ivextend and Ivreduce?
+
+They are commands used to extend or reduce the volume.
+3. What is umask?
+
+umask stands for “user file creation mask”. It is used to determine those settings of a mask that control file permission data and directory data.
+4. In the context of Linux, what does POSIX stand for?
+
+POSIX stands for Portable Operating System Interface for Computer Environments. It is the de facto standard for ensuring compatibility between UNIX versions.
+5. How is Linux connected to UNIX?
+
+The kernel that Linux uses resembles that of UNIX but does not require UNIX code.
+6. In the context of Linux, what is GPL?
+
+GPL stands for General Public License. It was originally created to protect the GNU project.
+7. Explain the GNU project.
+
+GNU is a project that was initiated by Richard Stallman in 1983 at MIT. The project began with the idea of providing control and freedom to the users in using software. As part of the GNU project, users are free to use, run, copy and share software.
+8. How do you turn a Linux system into a proxy server?
+
+Using the Squid service, you can turn a Linux system into a proxy server.
+9. What is LILO in the context of Linux?
+
+LILO is a boot loader for Linux. It is used for loading the Linux operating system into the main system memory before beginning operations.
+10. Define BIOS, MBR and GRUB.
+
+BIOS stands for Basic Input/Output System. MBR is Master Boot Record and GRUB is Graand Unified Bootloader.
+11. What is the difference between home directory and working directory?
+
+Home directory is the default directory when a user logs in whereas working directory is the user’s current working directory.
+12. In Linux, how do you track system events?
+
+To track events, a daemon called syslogd is used.
+13. What do you do when you encounter a suspicious IP?
+
+We should first block the suspicious IP by integrating tcp_wrapper. Next, we need to enable the “tcp_wrapper=YES” parameter in the configuration file at ‘/etc/vsftpd.conf’. Final step – include the suspicious IP in the ‘host.deny’ file in ‘/etc/host.deny’.
+14. Describe Telnet and SSH.
+
+Both Telnet and SSH are communication protocols that are used to manage systems remotely. While SSH requires exchange of keys, Telnet transmits data in plain text. Hence, SSH is said to be more secure than Telnet.
+15. State the difference between the locate and slocate commands.
+
+Locate searches for a file with the latest entries while slocate searches for files that users have accessed most recently.
+16. How many partitions do you need to install Linux?
+
+You need at least two partitions to install Linux on your system.
+17. How do you review boot messages in Linux?
+
+By using the dmesg command. Dmesg will pull out boot messages stored in the kernel ring buffer.
+18. What are symbolic links?
+
+Symbolic links are “shortcut keys” in Linux. These links point to specific programs, files or directories.
+19. What do Hard Links do?
+
+Hard links point directly to the physical file located on the disk, and not on the path name.
+20. What does pwd stand for?
+
+In Linux, it stands for print working directory.
+21. Explain the three different permissions in Linux.
+
+– Read: Gives users the permission to read files or list directories
+– Write: Gives users the permission to write to the file of new files and directories
+– Execute: Gives users the permission to run the file or lookup a specific file within a di

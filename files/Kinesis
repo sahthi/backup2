@@ -1,0 +1,6 @@
+a stream represents a group of data records
+the data record in a stream are distributed into shards
+a shard has a sequence of data record in a stream
+a producer puts data records into shards and consumer gets data records from shards
+One shard provides a capacity of 1MB/sec data input and 2MB/sec data output. One shard can support up to 1000 PUT records per second.	
+
