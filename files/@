@@ -1,0 +1,15 @@
+#!/usr/bin/python
+def sum_xor(li1):
+        res=0
+        length=len(li1)
+        for index in range(length):
+                for index1 in range(index+1,length):
+                        res+=(li1[index]^li1[index1])
+        return res
+
+li1=[7,3,5]
+li2=[5,9,7,6]
+res=sum_xor(li1)
+print "The sum of xor of all pairs of numbers in array is:",res
+res=sum_xor(li2)
+print "The sum of xor of all pairs of numbers in array is:",res
