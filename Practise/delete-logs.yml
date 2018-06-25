@@ -1,0 +1,9 @@
+- name: "Delete logs that we for sure 100% won't ever need to look at"
+  hosts: localhost
+  tasks:
+    - name: "Create file"
+      file: path=my-ansible-file state=touch
+
+    - name: "Delete that file we just created. Why? I don't know."
+      file: path=my-ansible-file state=absent
+

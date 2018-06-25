@@ -1,0 +1,7 @@
+#!/usr/bin/python
+s=raw_input("enter:")
+if s<=100:
+    print s
+elif s>100:
+    print "input is incorrect:" 
+        

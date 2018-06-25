@@ -1,0 +1,6 @@
+s=raw_input("enter string:")
+le i < len(s):
+    print s[i]
+    i += 1
+
+
