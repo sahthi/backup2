@@ -1,0 +1,5 @@
+    ---
+    - hosts: all
+    sudo: yes
+    roles:
+    - { role: "samplerole", packer_version: "0.7.0" }

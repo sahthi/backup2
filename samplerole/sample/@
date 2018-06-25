@@ -1,0 +1,7 @@
+def word_string(string):
+       my_string=string.split()
+       my_dict={}
+       for i in my_string:
+             my_dict(item)=i.count(i)
+       print my_dict
+word_count("Iam that Iam")
