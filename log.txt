@@ -1,0 +1,57 @@
+NOTICE:  Booting Trusted Firmware
+NOTICE:  BL1: v1.5(release):v1.5-112-ga8d9550
+NOTICE:  BL1: Built : 14:03:12, Apr 30 2018
+NOTICE:  BL1: Booting BL2
+NOTICE:  BL2: v1.5(release):v1.5-112-ga8d9550
+NOTICE:  BL2: Built : 14:03:14, Apr 30 2018
+NOTICE:  BL1: Booting BL31
+NOTICE:  BL31: v1.5(release):v1.5-112-ga8d9550
+NOTICE:  BL31: Built : 14:03:16, Apr 30 2018
+[    0.102081] dmi: Firmware registration failed.
+[    0.731397] Error: Driver 'sdhost-bcm2835' is already registered, aborting...
+[    2.145473] Under-voltage detected! (0x00050005)
+
+Raspbian GNU/Linux 9 raspberrypi ttyS0
+raspberrypi login: root
+Password: 
+Raspbian GNU/Linux 9 raspberrypi ttyS0
+raspberrypi login: raspberr ypi
+Password: 
+
+Login incorrect
+raspberrypi login: 
+Login timed out aft
+Raspbian GNU/Linux 9 raspberrypi ttyS0
+raspberrypi login: pi
+Password: 
+Last login: Wed Apr 18 01:24:30 UTC 2018 on tty1
+Linux raspberrypi 4.14.37-v8+ #2 SMP PREEMPT Tue May 1 11:22:37 IST 2018 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+pi@raspberrypi:~$ ls
+Desktop    Downloads  Music     Public        Templates
+Documents  log.txt    Pictures  python_games  Videos
+pi@raspberrypi:~$ vi log.txt 
+"log.txt" 303 lines, 20367 characters[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.37-v8+ (reddyalp@VTA076L) (gcc version 5.4.0 220160609 (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.9)) #2 SMP PREEMPT Tue May 1 11:22:337 IST 2018
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Raspberry Pi 3 Model B Rev 1.2
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 8 MiB at 0x000000003ac00000
+[    0.000000] On node 0 totalpages: 242688
+[    0.000000]   DMA zone: 3792 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 242688 pages, LIFO batch:31
+[    0.000000] percpu: Embedded 22 pages/cpu @ffffffeafab7c000 s50456 r8192 d314464 u90112
+[    0.000000] pcpu-alloc: s50456 r8192 d31464 u90112 alloc=22*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 238896
+[    0.000000] Kernel command line: 8250.nr_uarts=1 bcm2708_fb.fbwidth=1366 bcm22708_fb.fbheight=768 bcm2708_fb.fbswap=1 vc_mem.mem_base=0x3ec00000 vc_mem.mem_siize=0x40000000  dwc_otg.lpm_enable=0 console=ttyS0,115200 console=tty1 root=PARTU@@@:q!pi@raspberrypi:~$ 

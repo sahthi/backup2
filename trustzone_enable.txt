@@ -1,0 +1,58 @@
+ARM Trustzone firmware Enable procedure in raspberry pi 3:
+
+STEP1:
+    	find the below link whcih we can download the firmware from git clone 
+	https://github.com/ARM-software/arm-trusted-firmware/blob/master/docs/plat/rpi3.rst#setup-sd-card
+
+STEP2:
+   	Download the cross compiler for 64 bit ARM architecuture in the below link
+    	https://releases.linaro.org/components/toolchain/binaries/latest-5/aarch64-linux-gnu/
+	gcc-linaro-5.5.0-2017.10-x86_64_aarch64-linux-gnu.tar.gz
+STEP3:
+    	Extract the compiler and export the compiler path for compiling for the bootstarp code and kernel image
+	export ARCH=aarm64
+	export CROSS_COMPILE=/home/reddyalp/trustzone/gcc-linaro-5.5.0-2017.10-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
+	CROSS_COMPILE_AARCH64=/home/reddyalp/trustzone/toolchain/gcc-linaro-5.5.0-2017.10-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
+STEP4:
+    	Download the bootstarp code from the git clone using below link
+    	https://github.com/AntonioND/rpi3-arm-tf-bootstrap
+STEP5:
+    	Go inside the aarch64 bit folder and do the build.sh and it will generate the binary file(el2-bootstrap.bin)
+STEP6:
+	Then compile TF-A. For a AArch64 kernel, use the following command line:
+	make PLAT=rpi3 BL33=../rpi3-arm-tf-bootstrap/aarch64/el2-bootstrap.bin all fip
+
+	cp build/rpi3/release/bl1.bin bl1.pad.bin
+	truncate --size=65536 bl1.pad.bin
+	cat bl1.pad.bin build/rpi3/release/fip.bin > armstub8.bin
+		
+STEP7:
+	download the kernel source and compile and generate the image 
+	git clone --depth=1 -b rpi-4.14.y https://github.com/raspberrypi/linux
+	cd linux
+	
+	make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- bcmrpi3_defconfig
+	make -j 6 ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-
+
+	cp arch/arm64/boot/Image /media/redddyalp/boot/kernel8.img
+	cp arch/arm64/boot/dts/broadcom/bcm2710-rpi-3-b.dtb /media/redddyalp/boot/
+
+	rename the kernel img name to some other name old_kernel7.img
+	copy armstub8.bin to boot partition of the sd card.
+	
+	and install the mosules in the rootfile system
+STEP8:
+	in boot partion of sd card 
+	1)in config.txt write below lines of the statements
+	enable_uart=1
+	kernel_address=0x01000000
+	device_tree_address=0x02000000
+	kernel=kernel8.img
+	device_tree=bcm2710-rpi-3-b.dtb
+	2)cmandline.txt
+	memmap=256M$16M
+
+
+	
+
+    
