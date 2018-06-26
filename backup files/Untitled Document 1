@@ -1,0 +1,39 @@
+# The # character at the beginning of a line indicates a comment. Use
+# comments to describe your configuration.
+input {
+        beats{
+                port => "5044"
+        }
+
+        #file{
+        #       path => "/home/siddasah/Downloads/results/*.log"
+#               type => "logs"
+#               start_position => "beginning"
+#               sincedb_path => "/dev/null"
+#       
+#       codec => multiline {
+#             pattern => "\$"
+#             negate => true
+#             what => "next"
+#           }
+#       }
+}
+# The filter part of this file is commented out to indicate that it is
+# optional.
+filter {
+         mutate {
+              gsub => ["message", "\n", ""]
+         }
+        grok {
+                match => {"message" => "Test Start Time:%{SPACE}%{DAY:day}%{SPACE}%{MONTH:month}%{SPACE}%{MONTHDAY:daynum}%{SPACE}%{TIME:time}%{SPACE}%{YEAR:year}%{GREEDYDATA:msg}Total Tests:%{SPACE}%{NUMBER:total_tests}Test Name:%{SPACE}%{GREEDYDATA:test_name}Total Skipped Tests:%{SPACE}%{NUMBER:skipped_test}Total Failures:%{SPACE}%{NUMBER:total_failure}Kernel Version:%{SPACE}%{GREEDYDATA:linux_version}Machine Architecture:%{SPACE}%{GREEDYDATA:machine arcitecture}Hostname:%{SPACE}%{GREEDYDATA:host_name}"}
+
+        }
+ }
+output {
+        stdout { codec => rubydebug }
+        elasticsearch {
+                hosts => ["127.0.0.1:9200"]
+        }
+}
+~                                                                                                                                                      
+~    

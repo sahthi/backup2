@@ -1,0 +1,22 @@
+Test Start Time: Fri Nov 10 10:47:53 2017
+-----------------------------------------
+Testcase                       Result     Exit Value
+--------                       ------     ----------
+pipeio_1                       PASS       0    
+pipeio_3                       PASS       0    
+pipeio_4                       PASS       0    
+pipeio_5                       PASS       0    
+pipeio_6                       PASS       0    
+pipeio_8                       PASS       0    
+sem01                          PASS       0    
+sem02                          PASS       0    
+
+-----------------------------------------------
+Total Tests: 8
+Test Name:fs
+Total Skipped Tests: 0
+Total Failures: 0
+Kernel Version: 4.10.0-38-generic
+Machine Architecture: x86_64
+Hostname: VTLW039
+
