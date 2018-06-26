@@ -1,0 +1,3 @@
+---
+# Variables file 'vars.yml' in the same folder as the playbook.
+foo: bar

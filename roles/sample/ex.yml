@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+   - name: copy template
+     template: src=template.j2 dest='/temp/abcapp.conf'

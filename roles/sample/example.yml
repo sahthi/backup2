@@ -1,0 +1,6 @@
+---
+- hosts: all
+  vars_files:
+     - [ "apache_{{ ansible_os_family }}.yml", "apache_default.yml" ]
+  tasks:
+     - service: name={{ apache }} state=running
