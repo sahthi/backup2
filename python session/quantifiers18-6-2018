@@ -1,0 +1,66 @@
+re
+
+match it checks if the pattern is present at the beginning of the string or not
+if the pattern is present at the beginning of the string then it returns a 
+match object
+otherwise it returns None object
+
+search checks if the pattern is present any where in the string or not
+findall returns list of all the occurrences
+sub
+
+.  matches any character except a new line character
+
+quantifiers:
+
+* 0 or more number of times
+r"ca*b"
+cb, cab, caab, caaab,.....
+
++ 1 or more number of times
+r"ca+b"
+cab, caab, caaab, caaaab,....
+
+? 0 or 1 time
+r"ca?b"
+cb, cab
+
+{m,n} min=m max=n
+r"ca{2,4}b"
+caab, caaab, caaaab
+
+{m,} min=m max= any number of times
+r"ca{2,}b"
+caab, caaab, caaaab,.....
+
+{m} exactly m times
+r"ca{3}b".*?
+caaab
+
+
+
+character classes
+[a-z]
+[0-9]
+
+[10-19] 1 or 0 or 1 or 9
+[019]
+
+ipv4 address validation
+
+\b word boundary it does not match any character
+but it matches a transition from word to non word and non word to word
+\w word character alpha numeric and underscore [a-zA-Z0-9_]
+
+hi there
+
+
+123.453.098.231
+
+\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}
+
+([0-9][0-9]?|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.(
+
+
+
+? present after a quantifier it makes that quantifier non greedy in nature

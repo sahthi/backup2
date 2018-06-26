@@ -1,0 +1,260 @@
+non default
+
+default
+
+*args
+
+**kwargs
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+a: 4 b: 10
+sessitra@VTA010L:~$ vi fun2.py
+sessitra@VTA010L:~$ python fun2.py
+a: 4 b: 5
+sessitra@VTA010L:~$ vi fun2.py
+sessitra@VTA010L:~$ python fun2.py
+a: 4 b: 5 args: (45, 32, 12)
+sessitra@VTA010L:~$ vi fun2.py
+sessitra@VTA010L:~$ python fun2.py
+a: 4 b: 5 args: ()
+sessitra@VTA010L:~$ vi fun2.py
+sessitra@VTA010L:~$ python fun2.py
+a: 4 b: 5 args: (45,)
+sessitra@VTA010L:~$ vi fun2.py
+sessitra@VTA010L:~$ python fun2.py
+a: 4 b: 5 args: (45,) kwargs: {'y': 23, 'x': 10}
+sessitra@VTA010L:~$ vi fun2.py
+sessitra@VTA010L:~$ python fun2.py
+  File "fun2.py", line 1
+    def print_vals(a=3,b, *args, **kwargs):
+SyntaxError: non-default argument follows default argument
+sessitra@VTA010L:~$ vi fun2.py
+sessitra@VTA010L:~$ clear
+
+sessitra@VTA010L:~$ vi mod1.py
+sessitra@VTA010L:~$ python
+Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mod1
+>>> dir(mod1)
+['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'my_add', 'my_sub']
+>>> help(mod1.my_add)
+
+>>> mod1.my_add(4,5)
+9
+>>> mod1.my_sub(4,5)
+1
+>>> from mod1 import my_add, my_sub
+>>> my_add(5,6)
+11
+>>> my_sub(5,6)
+1
+>>> quit()
+sessitra@VTA010L:~$ vi mod1.py
+sessitra@VTA010L:~$ python mod1.py
+9
+7
+sessitra@VTA010L:~$ vi mod1.py
+sessitra@VTA010L:~$ python mod1.py
+9
+7
+sessitra@VTA010L:~$ python
+Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mod1
+9
+7
+>>> quit()
+sessitra@VTA010L:~$ vi mod1.py
+sessitra@VTA010L:~$ vi check_name.py
+sessitra@VTA010L:~$ python check_name.py 
+the value of __name__: __main__
+sessitra@VTA010L:~$ python
+Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import check_name
+the value of __name__: check_name
+>>> quit()
+sessitra@VTA010L:~$ vi mod1.py
+sessitra@VTA010L:~$ python
+Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 2==9
+False
+>>> 2==2
+True
+>>> "hi"=="hi"
+True
+>>> "hi"=="h3e"
+False
+>>> "hi"=="he"
+False
+>>> if True:
+...     print "hi"
+... 
+hi
+>>> if 3==1:
+...     print "hello"
+... else:
+...     print "bye"
+... 
+bye
+>>> quit()
+sessitra@VTA010L:~$ vi mod1.py
+sessitra@VTA010L:~$ python
+Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mod1
+>>> quit()
+sessitra@VTA010L:~$ python
+Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> quit()
+sessitra@VTA010L:~$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import urllib
+>>> urllib.__path__
+['/usr/lib/python3.5/urllib']
+>>> quit()
+sessitra@VTA010L:~$ cd /usr/lib/python3.5/urllib
+sessitra@VTA010L:/usr/lib/python3.5/urllib$ ls
+error.py     parse.py     request.py   robotparser.py
+__init__.py  __pycache__  response.py
+sessitra@VTA010L:/usr/lib/python3.5/urllib$ vi request.py 
+sessitra@VTA010L:/usr/lib/python3.5/urllib$ cd ~
+sessitra@VTA010L:~$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from urllib.request import urlopen
+>>> w = urlopen("http:sixty-north.com/c/t.txt")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 464, in open
+    req = meth(req)
+  File "/usr/lib/python3.5/urllib/request.py", line 1176, in do_request_
+    raise URLError('no host given')
+urllib.error.URLError: <urlopen error no host given>
+>>> w = urlopen("https:sixty-north.com/c/t.txt")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 464, in open
+    req = meth(req)
+  File "/usr/lib/python3.5/urllib/request.py", line 1176, in do_request_
+    raise URLError('no host given')
+urllib.error.URLError: <urlopen error no host given>
+>>> w = urlopen("https://sixty-north.com/c/t.txt")
+>>> w
+<http.client.HTTPResponse object at 0x7fa4da33de80>
+>>> data = w.read()
+>>> data
+b'It was the best of times\nit was the worst of times\nit was the age of wisdom\nit was the age of foolishness\nit was the epoch of belief\nit was the epoch of incredulity\nit was the season of Light\nit was the season of Darkness\nit was the spring of hope\nit was the winter of despair\nwe had everything before us\nwe had nothing before us\nwe were all going direct to Heaven\nwe were all going direct the other way\nin short the period was so far like the present period that some of\nits noisiest authorities insisted on its being received for good or for\nevil in the superlative degree of comparison only'
+>>> type(data)
+<class 'bytes'>
+>>> data_s = str(data, "utf-8")
+>>> type(data_s)
+<class 'str'>
+>>> for line in data_s.split("\n":
+  File "<stdin>", line 1
+    for line in data_s.split("\n":
+                                 ^
+SyntaxError: invalid syntax
+>>> for line in data_s.split("\n")"
+  File "<stdin>", line 1
+    for line in data_s.split("\n")"
+                                  ^
+SyntaxError: EOL while scanning string literal
+>>> for line in data_s.split("\n"):
+...     print line
+  File "<stdin>", line 2
+    print line
+             ^
+SyntaxError: Missing parentheses in call to 'print'
+>>> for line in data_s.split("\n"):
+...     print(line)
+... 
+It was the best of times
+it was the worst of times
+it was the age of wisdom
+it was the age of foolishness
+it was the epoch of belief
+it was the epoch of incredulity
+it was the season of Light
+it was the season of Darkness
+it was the spring of hope
+it was the winter of despair
+we had everything before us
+we had nothing before us
+we were all going direct to Heaven
+we were all going direct the other way
+in short the period was so far like the present period that some of
+its noisiest authorities insisted on its being received for good or for
+evil in the superlative degree of comparison only
+>>> quit()
+sessitra@VTA010L:~$ vi word_count.py
+sessitra@VTA010L:~$ python word_count.py
+  File "word_count.py", line 7
+    for line data_s.split("\n"):
+                  ^
+SyntaxError: invalid syntax
+sessitra@VTA010L:~$ vi word_count.py
+sessitra@VTA010L:~$ python word_count.py
+Traceback (most recent call last):
+  File "word_count.py", line 1, in <module>
+    from urllib.request import urlopen
+ImportError: No module named request
+sessitra@VTA010L:~$ python3 word_count.py
+Word count dictionary: {'or': 1, 'noisiest': 1, 'worst': 1, 'on': 1, 'authorities': 1, 'period': 2, 'good': 1, 'superlative': 1, 'so': 1, 'Light': 1, 'the': 14, 'before': 2, 'some': 1, 'times': 2, 'despair': 1, 'best': 1, 'going': 2, 'present': 1, 'wisdom': 1, 'received': 1, 'that': 1, 'spring': 1, 'everything': 1, 'to': 1, 'way': 1, 'foolishness': 1, 'being': 1, 'all': 2, 'of': 12, 'only': 1, 'short': 1, 'had': 2, 'hope': 1, 'for': 2, 'evil': 1, 'nothing': 1, 'degree': 1, 'insisted': 1, 'were': 2, 'us': 2, 'in': 2, 'far': 1, 'It': 1, 'epoch': 2, 'incredulity': 1, 'belief': 1, 'was': 11, 'winter': 1, 'we': 4, 'season': 2, 'direct': 2, 'its': 2, 'comparison': 1, 'Darkness': 1, 'age': 2, 'other': 1, 'it': 9, 'Heaven': 1, 'like': 1}
+sessitra@VTA010L:~$ vi word_count.py
+sessitra@VTA010L:~$ python3 word_count.py
+  File "word_count.py", line 26
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+sessitra@VTA010L:~$ python3 word_count.py
+  File "word_count.py", line 26
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+sessitra@VTA010L:~$ vi word_count.py
+sessitra@VTA010L:~$ python3 word_count.py
+Word count dictionary: {'it': 9, 'the': 14, 'were': 2, 'all': 2, 'had': 2, 'Darkness': 1, 'like': 1, 'everything': 1, 'wisdom': 1, 'only': 1, 'Light': 1, 'insisted': 1, 'so': 1, 'way': 1, 'spring': 1, 'incredulity': 1, 'evil': 1, 'was': 11, 'comparison': 1, 'on': 1, 'us': 2, 'hope': 1, 'nothing': 1, 'received': 1, 'being': 1, 'other': 1, 'best': 1, 'going': 2, 'belief': 1, 'or': 1, 'season': 2, 'despair': 1, 'before': 2, 'its': 2, 'degree': 1, 'foolishness': 1, 'times': 2, 'of': 12, 'noisiest': 1, 'direct': 2, 'to': 1, 'that': 1, 'good': 1, 'far': 1, 'in': 2, 'period': 2, 'It': 1, 'present': 1, 'age': 2, 'some': 1, 'worst': 1, 'for': 2, 'authorities': 1, 'superlative': 1, 'winter': 1, 'epoch': 2, 'we': 4, 'short': 1, 'Heaven': 1}
+sessitra@VTA010L:~$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import word_count
+>>> dir(word_count)
+['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'get_data', 'get_word_count', 'urlopen']
+>>> get_data("https://sixty-north.com/c/t.txt")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'get_data' is not defined
+>>> word_count.get_data("https://sixty-north.com/c/t.txt")
+'It was the best of times\nit was the worst of times\nit was the age of wisdom\nit was the age of foolishness\nit was the epoch of belief\nit was the epoch of incredulity\nit was the season of Light\nit was the season of Darkness\nit was the spring of hope\nit was the winter of despair\nwe had everything before us\nwe had nothing before us\nwe were all going direct to Heaven\nwe were all going direct the other way\nin short the period was so far like the present period that some of\nits noisiest authorities insisted on its being received for good or for\nevil in the superlative degree of comparison only'
+>>> word_count.get_word_count("https://sixty-north.com/c/t.txt")
+{'noisiest': 1, 'or': 1, 'hope': 1, 'evil': 1, 'that': 1, 'Light': 1, 'everything': 1, 'we': 4, 'direct': 2, 'belief': 1, 'only': 1, 'good': 1, 'to': 1, 'on': 1, 'times': 2, 'wisdom': 1, 'going': 2, 'being': 1, 'insisted': 1, 'worst': 1, 'received': 1, 'comparison': 1, 'some': 1, 'superlative': 1, 'was': 11, 'it': 9, 'like': 1, 'all': 2, 'Heaven': 1, 'degree': 1, 'so': 1, 'period': 2, 'spring': 1, 'us': 2, 'of': 12, 'age': 2, 'season': 2, 'had': 2, 'way': 1, 'incredulity': 1, 'before': 2, 'short': 1, 'far': 1, 'its': 2, 'epoch': 2, 'for': 2, 'nothing': 1, 'best': 1, 'despair': 1, 'present': 1, 'Darkness': 1, 'the': 14, 'other': 1, 'authorities': 1, 'were': 2, 'in': 2, 'It': 1, 'foolishness': 1, 'winter': 1}
+>>> quit()
+sessitra@VTA010L:~$ vi word_count.py
+sessitra@VTA010L:~$ pwd
+/home/sessitra
+sessitra@VTA010L:~$ vi request.py 
+
+
+

@@ -1,0 +1,42 @@
+kdjfkld lkdjfklajkl
+sessitra@VTA010L:~$ vi notes.txt
+sessitra@VTA010L:~$ python name_oc.py 
+  File "name_oc.py", line 11
+    mat = re.search("occupation:\s+([a-z ]+)", line):
+                                                    ^
+SyntaxError: invalid syntax
+sessitra@VTA010L:~$ python name_oc.py 
+Traceback (most recent call last):
+  File "name_oc.py", line 13, in <module>
+    name_occ[name] = occupation
+NameError: name 'occupation' is not defined
+sessitra@VTA010L:~$ python name_oc.py 
+Traceback (most recent call last):
+  File "name_oc.py", line 12, in <module>
+    occupation = mat.group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+sessitra@VTA010L:~$ python name_oc.py 
+name occ dictionary is: {'chandra': 'commander', 'rahul': 'business analyst'}
+sessitra@VTA010L:~$ vi notes.txt
+sessitra@VTA010L:~$ python name_oc.py 
+name occ dictionary is: {'chandra': 'commander', 'rahul': 'software engineer'}
+sessitra@VTA010L:~$ clear
+
+sessitra@VTA010L:~$ python phone_ns.py 
+Traceback (most recent call last):
+  File "phone_ns.py", line 6, in <module>
+    print re.findall(r"\d{3}\-\d{4}\-\d{3}", msg)
+NameError: name 're' is not defined
+sessitra@VTA010L:~$ python phone_ns.py 
+['783-9088-124', '897-3154-123', '376-1234-583', '794-1823-458']
+sessitra@VTA010L:~$ python phone_ns.py 
+[]
+sessitra@VTA010L:~$ python phone_ns.py 
+['783-9088-123', '376-1234-583']
+sessitra@VTA010L:~$ 
+
+
+
+
+
+
