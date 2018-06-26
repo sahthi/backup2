@@ -1,0 +1,32 @@
+-----------------
+1st Round
+-----------------
+
+open system call
+Bitwise operators programme(Set, Clear, Toggle)
+cache memory
+MMU and Usage
+mutex , spinlocks and semaphores
+binary vs counter semaphores
+storage classes (static,Extern)
+
+
+-----------------
+2nd Round
+------------------
+
+Project Explanation
+BootLoaders and dts Modification
+Bootloaders entries
+Who called Bootloaders and dts
+about Project ?
+Project Issues
+
+
+How to change dts file in SourceCode ..?
+Kernel Panic
+Booting Sequence
+Bootloaders path
+
+
+
