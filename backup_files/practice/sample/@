@@ -1,0 +1,6 @@
+f1=raw_input("enter the file name:")
+with open(f1,'r') as f:
+     for line in file:
+          l=line.title()
+          print l
+

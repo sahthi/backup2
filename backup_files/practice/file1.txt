@@ -1,0 +1,12 @@
+f=open("sample.txt","r+")
+str=f.read(13)
+print ("read string:",str)
+pos=f.tell()
+print "position is:",pos
+pos=f.seek(2,0)
+str=f.read(12)
+print "read string:",str
+pos=f.seek(-10,2)
+str=f.read(10)
+print "read string:",str
+
