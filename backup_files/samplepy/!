@@ -1,0 +1,13 @@
+d={'a':11,'b':12,'c':13}
+print("initial dictionary")
+print d
+key=raw_input("enter the key to delete[a-c]:")
+if key in d:
+    print d,key,
+    del d[key]
+    print key
+else:
+   print "key not found"
+ 
+print "updated dictionary:"
+print d

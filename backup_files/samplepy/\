@@ -1,0 +1,22 @@
+import operator
+l1=[1,2,3,5,6,]
+print("the original list is:",l1)
+for i in range(0,len(l1)):
+     print(l1[i])
+print("\r")
+operator.setitem(l1,3,3)
+print("the modified list after setitem() is: ", l1)
+for i in range(0,len(l1)):
+    print(l1[i])
+print("\r")
+operator.delitem(l1,1)
+print("the modified list after delete item is:",l1)
+for i in range(0,len(l1)):
+    print(l1[i])
+print("\r")
+print("the fourth element of list is:"l1[3])
+operator.getitem(l1,3)
+
+
+
+

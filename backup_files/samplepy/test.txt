@@ -1,0 +1,3 @@
+bin/kibana-plugin install x-pack
+bin/kibana-plugin install x-pack
+bin/kibana-plugin install file:///path/to/file/x-pack-6.0.0.zip
